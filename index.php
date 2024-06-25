@@ -12,8 +12,10 @@ $testo = 'La solitudine ! La conosci tu, la
             strepiti perduti. E vicino alle femmine che accarezzo, quando la notte si richiude su di noi
             e io credo, staccato dalla mia carne ormai satura, di cogliere un poco di me stesso tra la
             vita e la morte, la mia solitudine totale si sazia dell’acre fortore del piacere alle ascelle
-            della femmina che ancora sprofonda al mio fianco.'
+            della femmina che ancora sprofonda al mio fianco.';
 
+$badword = $_GET["badword"];
+$censurato = str_replace($badword, '*****', $testo);
 
 ?>
 
@@ -23,17 +25,28 @@ $testo = 'La solitudine ! La conosci tu, la
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PHP Bad Words</title>
 </head>
 <body>
     <main>
+        <h3>
+            Mio testo: 
+        </h3>
         <p>
             <?php echo $testo ?>
-
+        </p>
+        <div>
             <form action="./index.php" method="get">
                 <label for="badword">Scrivi la parola da censurare: </label>
                 <input type="text" name="badword" id="badword">
+                <button type="submit">Censura!</button>
             </form>
+        </div>
+            
+        <h3>Testo censurato:</h3>
+        <p>
+            <?php echo $censurato ?>
         </p>
     </main>
 </body>

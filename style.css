@@ -1,0 +1,23 @@
+main{
+    font-family: sans-serif;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+div{
+    border: 1px solid rgb(126, 86, 126);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    width: 500px;
+    margin: 2rem auto;
+}
+
+button{
+    background-color: rgb(126, 86, 126);
+    color: white;
+    padding: .5rem;
+    border-radius: 5px;
+    margin: 0 1rem;
+}
